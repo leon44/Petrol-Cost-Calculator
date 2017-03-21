@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 print("Welcome to Leon's journey cost calculator!")
-print ""
 def costcalculatorUK():
+	print("UK mode")
 	miles = int(input("Total miles:"))
 	mpg = int(raw_input("MPG of the car:") or "45")
 	price = float(raw_input("Petrol price per liter: £") or "1.20")
@@ -17,16 +17,13 @@ def costcalculatorUK():
 	print("Thanks and goodnight!")
 
 def costcalculatorNL():
-	print("Welcome to Leon's Euro journey cost calculator!")
-	print ""
-	km = int(input("Total kilometers:"))
-	mpg = int(raw_input("MPG of the car:") or "45")
+	print("Euro mode")
+	km = float(raw_input("Total kilometers:"))
+	kpl = float(raw_input("Kilometres per litre:") or "20")
 	price = float(raw_input("Petrol price per liter: €") or "1.50")
 	passengers = int(raw_input("How many passengers are travelling?:") or "1")
 	priceCents = int(price*100)
-	mpl = mpg / 4.54609
-	miles = km * 0.621371
-	litresUsed = miles / mpl
+	litresUsed = km / kpl
 	petrolCost = litresUsed * priceCents
 	petrolCostEuro = float("{0:.2f}".format(petrolCost / 100))
 	perpassengerCost = float("{0:2f}".format(petrolCostEuro / passengers))
