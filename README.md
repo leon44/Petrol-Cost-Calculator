@@ -1,3 +1,3 @@
-# Tutorial
+Petrol cost calculator 
 
-This is my tutorial repository.
+Calculates the cost of fuel per passenger in miles/pounds or km/euros
